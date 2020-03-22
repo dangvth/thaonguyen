@@ -6,9 +6,14 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraBars;
+using PetStore.Model;
+using System.Windows.Forms;
+using System.Drawing;
+using System.IO;
 
 namespace PetStore.Views.PetMedicineCollectionView{
     public partial class PetMedicineCollectionView : XtraUserControl {
+        private String pmIDSelected = "";
         public PetMedicineCollectionView() {
             InitializeComponent();
 			if(!mvvmContext.IsDesignMode)
@@ -43,6 +48,98 @@ namespace PetStore.Views.PetMedicineCollectionView{
                     popupMenu.ShowPopup(W.PointToScreen(e.Location), s);
                 }
             };
+        }
+
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (pmIDSelected != "")
+            {
+                PetMedicineModel pmm = new PetMedicineModel();
+                pmm.DeletePetMedicine(pmIDSelected);
+                XtraMessageBox.Show("Delete successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                XtraMessageBox.Show("Please choose  Medicine item to delete !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void gridView_RowClick(object sender, RowClickEventArgs e)
+        {
+            int idx = gridView.FocusedRowHandle;
+            pmIDSelected = gridView.GetRowCellValue(idx, "pm_id").ToString();
+        }
+
+        private void bbiRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (pmIDSelected != "")
+            {
+                PetFoodModel pfm = new PetFoodModel();
+                pfm.RestorePetFood(pmIDSelected);
+                XtraMessageBox.Show("Restore successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                XtraMessageBox.Show("Please choose Medicine item to restore !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btndetail_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (pmIDSelected != "")
+            {
+                DetailMedicine dmd = new DetailMedicine();
+                PetMedicineModel pmm = new PetMedicineModel();
+
+                PetMedicine med = pmm.getPetMedicine(pmIDSelected);
+
+                dmd.txtPmdId.Text = med.pm_id;
+                dmd.txtPmdName.Text = med.pm_name;
+                dmd.txtPmdSaleprices.Text = med.pm_salePrice.ToString();
+                dmd.txtPmdAmount.Text = med.pm_amount.ToString();
+                dmd.txtPmdDescript.Text = med.pm_description;
+
+                if (med.pm_status == "Active") { dmd.txtPmdStatus.ForeColor = Color.Green; }
+                else { dmd.txtPmdStatus.ForeColor = Color.Red; }
+
+                dmd.txtPmdStatus.Text = med.pm_status;
+               
+                dmd.lbldetail.Text = "Pet's Food detail for '" + med.pm_name + "'";
+
+                String projectPath = Path.GetFullPath(Path.Combine(Application.StartupPath, "..\\.."));
+                String pathImage = projectPath + "\\img\\" + med.pm_image;
+                Image img = Image.FromFile(pathImage);
+                dmd.ptbimage.Image = pmm.ResizeImage(img, 440, 440);
+
+                dmd.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please choose a Medicine to view detail !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (pmIDSelected != "")
+            {
+                EditMedicine edm = new EditMedicine();
+                var db = new PetStoreEntities();
+                var pm = db.PetMedicines.Find(pmIDSelected);
+                edm.txtPmdId.Text = pm.pm_id;
+                edm.txtPmdname.Text = pm.pm_name;
+                
+                edm.txtPmdprices.Text = pm.pm_prices + "";
+                edm.txtPmdsaleprices.Text = pm.pm_salePrice + "";
+                edm.txtPmdDescript.Text = pm.pm_description ;
+                edm.cbbstatus.SelectedItem = pm.pm_status;
+                edm.txtPmdamount.Text = pm.pm_amount + "";
+                edm.ShowDialog();
+            }
+            else
+            {
+                XtraMessageBox.Show("Please choose a Medicine item to Edit !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

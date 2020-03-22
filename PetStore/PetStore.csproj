@@ -10,8 +10,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PetStore</RootNamespace>
     <AssemblyName>PetStore</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -46,6 +47,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PetStore.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
@@ -153,6 +157,12 @@
     <Compile Include="Common\EntitiesViewModel.cs" />
     <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
     <Compile Include="Common\SingleObjectViewModel.cs" />
+    <Compile Include="DetailMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailMedicine.Designer.cs">
+      <DependentUpon>DetailMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailPetFoodForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +174,12 @@
     </Compile>
     <Compile Include="DetailPetForm.Designer.cs">
       <DependentUpon>DetailPetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMedicine.Designer.cs">
+      <DependentUpon>EditMedicine.cs</DependentUpon>
     </Compile>
     <Compile Include="EditPetFood.cs">
       <SubType>Form</SubType>
@@ -180,6 +196,7 @@
     <Compile Include="Model\AccountModel.cs" />
     <Compile Include="Model\CommentDetailModel.cs" />
     <Compile Include="Model\CommentModel.cs" />
+    <Compile Include="Model\PetMedicineModel.cs" />
     <Compile Include="Model\PetFoodModel.cs" />
     <Compile Include="Model\PetModel.cs" />
     <Compile Include="MyUtil\Encrypt.cs" />
@@ -187,6 +204,7 @@
     <Compile Include="Object\Comment.cs" />
     <Compile Include="Object\CommentDetail.cs" />
     <Compile Include="Object\Food.cs" />
+    <Compile Include="Object\Medicine.cs" />
     <Compile Include="Object\Pet.cs" />
     <Compile Include="Object\Role.cs" />
     <Compile Include="Object\Type.cs" />
@@ -200,6 +218,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PetStoreDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonForm1.Designer.cs">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectProduct.cs">
       <SubType>Form</SubType>
@@ -481,11 +505,17 @@
     <EmbeddedResource Include="CommentStaff.resx">
       <DependentUpon>CommentStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetailMedicine.resx">
+      <DependentUpon>DetailMedicine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailPetFoodForm.resx">
       <DependentUpon>DetailPetFoodForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailPetForm.resx">
       <DependentUpon>DetailPetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMedicine.resx">
+      <DependentUpon>EditMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPetFood.resx">
       <DependentUpon>EditPetFood.cs</DependentUpon>
@@ -495,6 +525,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PetFoodStaff.resx">
       <DependentUpon>PetFoodStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonForm1.resx">
+      <DependentUpon>RibbonForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectProduct.resx">
       <DependentUpon>SelectProduct.cs</DependentUpon>
@@ -640,6 +673,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\floppy_disk_save-512.png" />
+    <None Include="Resources\tải xuống %288%29.jpg" />
+    <None Include="Resources\tải xuống %287%29.jpg" />
     <None Include="img\error-image.png" />
     <Content Include="img\PET001.jpg" />
     <Content Include="PetStoreModel.Context.tt">
