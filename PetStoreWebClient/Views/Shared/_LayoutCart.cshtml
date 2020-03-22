@@ -4,19 +4,14 @@
     <title>Wild Pet web page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!--css-->
-    <link href="~/Assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="~/Assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="~/Assets/css/slider.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="~/Assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Assets/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="~/Assets/js/move-top.js"></script>
     <script type="text/javascript" src="~/Assets/js/easing.js"></script>
     <script type="text/javascript" src="~/Assets/js/startstop-slider.js"></script>
-    <!--fonts-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        .guest-image{
+        .guest-image {
             width: 250px;
             height: 200px;
         }
@@ -93,7 +88,6 @@
                         <div class="clear"></div>
                     </ul>
                 </div>
-                @RenderSection("search", required: false)
                 <div class="clear"></div>
             </div>
             @RenderSection("slide", required: false)

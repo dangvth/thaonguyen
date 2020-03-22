@@ -7,7 +7,13 @@
     var viewPetToyList = (List<PetStoreWebClient.EF.PetToys>)ViewBag.viewPetToy;
     var viewPetSaleOffList = (List<PetStoreWebClient.EF.Pet>)ViewBag.viewPetSaleOff;
 }
-
+@section search{
+    <div class="search_box">
+        <form>
+            <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+        </form>
+    </div>
+}
 @section slide{
     <div class="header_slide">
         <div class="header_bottom_left">
@@ -104,7 +110,7 @@
                         <p><span class="rupees">@item.pf_salePrice.Value.ToString("N0") vnđ</span></p>
                     </div>
                     <div class="add-cart">
-                        <h4><a href="@url">Add to Cart</a></h4>
+                        <h4><a href="/add-to-cart?productID=@item.pf_id&Quantity=1">Add to Cart</a></h4>
                     </div>
                     <div class="clear"></div>
                 </div>
