@@ -1,0 +1,122 @@
+﻿
+@model List<PetStoreWebClient.EF.PetFood>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var viewPFSaleOff = (List<PetStoreWebClient.EF.PetFood>)ViewBag.viewPetFoodSaleOff;
+}
+
+@section slide{
+    <div class="header_slide">
+        <div class="header_bottom_left">
+            <div class="categories">
+                <ul>
+                    <h3>Products</h3>
+                    <li>@Html.ActionLink("Pet", "Index", "Pet")</li>
+                    <li>@Html.ActionLink("Pet's food", "Index", "PetFood")</li>
+                    <li><a href="#">Pet's accessories</a></li>
+                    <li><a href="#">Pet's Toys</a></li>
+                    <li><a href="#">Pet's Medicine</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_bottom_right">
+            <div class="slider">
+                <div id="slider">
+                    <div id="mover">
+                        @foreach (var item in viewPFSaleOff)
+                        {
+                            double disRate = (double)(100 - ((item.pf_salePrice * 100) / item.pf_prices));
+                            int disPrice = (int)(item.pf_prices - item.pf_salePrice);
+                            <div id="slide-1" class="slide">
+                                <div class="slider-img">
+                                    <a href="#"><img class="petfood-slide-image" src="~/Assets/images/@item.pf_image" alt="learn more" /></a>
+                                </div>
+                                <div class="slider-text">
+                                    <h1>@item.pf_name<br><span>SALE</span></h1>
+                                    <h2>UPTo @disRate% OFF</h2>
+                                    <div class="features_list">
+                                        <h4>@item.pf_salePrice.Value.ToString("N0") vnđ (-@disPrice.ToString("N0") vnđ)</h4>
+                                    </div>
+                                    <a href="#" class="button">Buy Now</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+}
+<div class="content">
+    <div class="content_top">
+        <div class="heading">
+            <h3>Pet's Food</h3>
+        </div>
+        <div class="see">
+            <p><a href="#">See all Products</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section group">
+        @foreach (var item in Model)
+        {
+            var url = "/detail/petfood/" + item.pf_id;
+            <div class="grid_1_of_4 images_1_of_4">
+                <a href="@url"><img src="~/Assets/images/@item.pf_image" alt="" /></a>
+                <h2>@item.pf_name</h2>
+                <div class="price-details">
+                    <div class="price-number">
+                        <p><span class="rupees">@item.pf_salePrice.Value.ToString("N0") vnđ</span></p>
+                    </div>
+                    <div class="add-cart">
+                        <h4><a href="@url">Add to Cart</a></h4>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        }
+        <!--Phân trang-->
+        @if (ViewBag.totalPage > 1)
+        {
+            var pageDisplay = (int)ViewBag.maxPage;
+            int totalPage = (int)ViewBag.totalPage;
+            int currentPage = (int)ViewBag.Page;
+
+            //Create numberic link
+            var startPageIndex = Math.Max(1, currentPage - pageDisplay / 2);
+            var endPageINdex = Math.Min(totalPage, currentPage + pageDisplay / 2);
+
+            var url = "/petfood/list";
+            <div class="paging">
+                @if (currentPage > ViewBag.first)
+                {
+                    <a href="@url?page=@ViewBag.first" title="First page" class="first">First</a>
+                    <a href="@url?page=@ViewBag.prev" title="Previous page" class="prev">Previous</a>
+                }
+                @for (int i = startPageIndex; i <= endPageINdex; i++)
+                {
+                    if (i == currentPage)
+                    {
+                        <a href="@url?page=@i" class="active" title="Page @i">@i</a>
+                    }
+                    else
+                    {
+                        <a href="@url?page=@i" class="pos" title="Page @i">@i</a>
+                    }
+                }
+                @if (currentPage < totalPage)
+                {
+                    <a href="@url?page=@ViewBag.next" title="Next page" class="next">Next</a>
+                    <a href="@url?page=@ViewBag.last" title="Last page" class="last">Last</a>
+                }
+            </div>
+        } else
+        {
+            <span>END</span>
+        }
+    </div>
+</div>

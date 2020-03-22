@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PetStoreModelStoreContainer" CdmEntityContainer="PetStoreEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="PetStoreModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="ac_id" ColumnName="ac_id" />
+          <ScalarProperty Name="ac_userName" ColumnName="ac_userName" />
+          <ScalarProperty Name="ac_pwd" ColumnName="ac_pwd" />
+          <ScalarProperty Name="ac_status" ColumnName="ac_status" />
+          <ScalarProperty Name="r_id" ColumnName="r_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="PetStoreModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="b_id" ColumnName="b_id" />
+          <ScalarProperty Name="b_purchaseDate" ColumnName="b_purchaseDate" />
+          <ScalarProperty Name="b_status" ColumnName="b_status" />
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="g_id" ColumnName="g_id" />
+          <ScalarProperty Name="b_address" ColumnName="b_address" />
+          <ScalarProperty Name="b_total" ColumnName="b_total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillDetails">
+      <EntityTypeMapping TypeName="PetStoreModel.BillDetail">
+        <MappingFragment StoreEntitySet="BillDetail">
+          <ScalarProperty Name="bd_id" ColumnName="bd_id" />
+          <ScalarProperty Name="b_id" ColumnName="b_id" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="pt_id" ColumnName="pt_id" />
+          <ScalarProperty Name="pf_id" ColumnName="pf_id" />
+          <ScalarProperty Name="pa_id" ColumnName="pa_id" />
+          <ScalarProperty Name="pm_id" ColumnName="pm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="PetStoreModel.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="pt_id" ColumnName="pt_id" />
+          <ScalarProperty Name="pf_id" ColumnName="pf_id" />
+          <ScalarProperty Name="pa_id" ColumnName="pa_id" />
+          <ScalarProperty Name="pm_id" ColumnName="pm_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="PetStoreModel.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="cmt_id" ColumnName="cmt_id" />
+          <ScalarProperty Name="cmt_content" ColumnName="cmt_content" />
+          <ScalarProperty Name="cmt_published" ColumnName="cmt_published" />
+          <ScalarProperty Name="cmt_status" ColumnName="cmt_status" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentDetails">
+      <EntityTypeMapping TypeName="PetStoreModel.CommentDetail">
+        <MappingFragment StoreEntitySet="CommentDetail">
+          <ScalarProperty Name="cmt_id" ColumnName="cmt_id" />
+          <ScalarProperty Name="cmtd_id" ColumnName="cmtd_id" />
+          <ScalarProperty Name="cmtd_content" ColumnName="cmtd_content" />
+          <ScalarProperty Name="cmtd_published" ColumnName="cmtd_published" />
+          <ScalarProperty Name="cmtd_status" ColumnName="cmtd_status" />
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gifts">
+      <EntityTypeMapping TypeName="PetStoreModel.Gift">
+        <MappingFragment StoreEntitySet="Gift">
+          <ScalarProperty Name="g_id" ColumnName="g_id" />
+          <ScalarProperty Name="g_name" ColumnName="g_name" />
+          <ScalarProperty Name="g_image" ColumnName="g_image" />
+          <ScalarProperty Name="g_status" ColumnName="g_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Origins">
+      <EntityTypeMapping TypeName="PetStoreModel.Origin">
+        <MappingFragment StoreEntitySet="Origin">
+          <ScalarProperty Name="org_id" ColumnName="org_id" />
+          <ScalarProperty Name="org_name" ColumnName="org_name" />
+          <ScalarProperty Name="org_status" ColumnName="org_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pets">
+      <EntityTypeMapping TypeName="PetStoreModel.Pet">
+        <MappingFragment StoreEntitySet="Pet">
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="p_prices" ColumnName="p_prices" />
+          <ScalarProperty Name="p_salePrice" ColumnName="p_salePrice" />
+          <ScalarProperty Name="p_image" ColumnName="p_image" />
+          <ScalarProperty Name="p_description" ColumnName="p_description" />
+          <ScalarProperty Name="p_published" ColumnName="p_published" />
+          <ScalarProperty Name="p_status" ColumnName="p_status" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PetAccessories">
+      <EntityTypeMapping TypeName="PetStoreModel.PetAccessory">
+        <MappingFragment StoreEntitySet="PetAccessories">
+          <ScalarProperty Name="pa_id" ColumnName="pa_id" />
+          <ScalarProperty Name="pa_name" ColumnName="pa_name" />
+          <ScalarProperty Name="pa_prices" ColumnName="pa_prices" />
+          <ScalarProperty Name="pa_salePrice" ColumnName="pa_salePrice" />
+          <ScalarProperty Name="pa_material" ColumnName="pa_material" />
+          <ScalarProperty Name="pa_amount" ColumnName="pa_amount" />
+          <ScalarProperty Name="pa_published" ColumnName="pa_published" />
+          <ScalarProperty Name="pa_status" ColumnName="pa_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PetFoods">
+      <EntityTypeMapping TypeName="PetStoreModel.PetFood">
+        <MappingFragment StoreEntitySet="PetFood">
+          <ScalarProperty Name="pf_id" ColumnName="pf_id" />
+          <ScalarProperty Name="pf_name" ColumnName="pf_name" />
+          <ScalarProperty Name="pf_image" ColumnName="pf_image" />
+          <ScalarProperty Name="pf_prices" ColumnName="pf_prices" />
+          <ScalarProperty Name="pf_salePrice" ColumnName="pf_salePrice" />
+          <ScalarProperty Name="pf_amount" ColumnName="pf_amount" />
+          <ScalarProperty Name="pf_status" ColumnName="pf_status" />
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PetMedicines">
+      <EntityTypeMapping TypeName="PetStoreModel.PetMedicine">
+        <MappingFragment StoreEntitySet="PetMedicine">
+          <ScalarProperty Name="pm_id" ColumnName="pm_id" />
+          <ScalarProperty Name="pm_name" ColumnName="pm_name" />
+          <ScalarProperty Name="pm_image" ColumnName="pm_image" />
+          <ScalarProperty Name="pm_prices" ColumnName="pm_prices" />
+          <ScalarProperty Name="pm_salePrice" ColumnName="pm_salePrice" />
+          <ScalarProperty Name="pm_amount" ColumnName="pm_amount" />
+          <ScalarProperty Name="pm_description" ColumnName="pm_description" />
+          <ScalarProperty Name="pm_status" ColumnName="pm_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PetToys">
+      <EntityTypeMapping TypeName="PetStoreModel.PetToy">
+        <MappingFragment StoreEntitySet="PetToys">
+          <ScalarProperty Name="pt_id" ColumnName="pt_id" />
+          <ScalarProperty Name="pt_name" ColumnName="pt_name" />
+          <ScalarProperty Name="pt_image" ColumnName="pt_image" />
+          <ScalarProperty Name="pt_prices" ColumnName="pt_prices" />
+          <ScalarProperty Name="pt_salePrice" ColumnName="pt_salePrice" />
+          <ScalarProperty Name="pt_amount" ColumnName="pt_amount" />
+          <ScalarProperty Name="pt_description" ColumnName="pt_description" />
+          <ScalarProperty Name="pt_published" ColumnName="pt_published" />
+          <ScalarProperty Name="pt_status" ColumnName="pt_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="PetStoreModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="r_id" ColumnName="r_id" />
+          <ScalarProperty Name="r_name" ColumnName="r_name" />
+          <ScalarProperty Name="r_status" ColumnName="r_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Types">
+      <EntityTypeMapping TypeName="PetStoreModel.Type">
+        <MappingFragment StoreEntitySet="Type">
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="t_name" ColumnName="t_name" />
+          <ScalarProperty Name="t_status" ColumnName="t_status" />
+          <ScalarProperty Name="org_id" ColumnName="org_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PetStoreModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="u_name" ColumnName="u_name" />
+          <ScalarProperty Name="u_gender" ColumnName="u_gender" />
+          <ScalarProperty Name="u_email" ColumnName="u_email" />
+          <ScalarProperty Name="u_phone" ColumnName="u_phone" />
+          <ScalarProperty Name="u_address" ColumnName="u_address" />
+          <ScalarProperty Name="u_status" ColumnName="u_status" />
+          <ScalarProperty Name="ac_id" ColumnName="ac_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
