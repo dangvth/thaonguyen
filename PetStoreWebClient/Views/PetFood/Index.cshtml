@@ -79,6 +79,7 @@
                 </div>
             </div>
         }
+        <div class="clear"></div>
         <!--Phân trang-->
         @if (ViewBag.totalPage > 1)
         {
@@ -91,30 +92,31 @@
             var endPageINdex = Math.Min(totalPage, currentPage + pageDisplay / 2);
 
             var url = "/petfood/list";
-            <div class="paging">
+            <ul class="pagination" style="float: right">
                 @if (currentPage > ViewBag.first)
                 {
-                    <a href="@url?page=@ViewBag.first" title="First page" class="first">First</a>
-                    <a href="@url?page=@ViewBag.prev" title="Previous page" class="prev">Previous</a>
+                    <li class="page-item"><a class="page-link" href="@url?page=@ViewBag.first" title="First page" ><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                    <li class="page-item"><a class="page-link" href="@url?page=@ViewBag.prev" title="Previous page" ><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
                 }
                 @for (int i = startPageIndex; i <= endPageINdex; i++)
                 {
                     if (i == currentPage)
                     {
-                        <a href="@url?page=@i" class="active" title="Page @i">@i</a>
+                        <li class="page-item active"><a class="page-link" href="@url?page=@i" title="Page @i">@i</a></li>
                     }
                     else
                     {
-                        <a href="@url?page=@i" class="pos" title="Page @i">@i</a>
+                        <li class="page-item"><a class="page-link" href="@url?page=@i" title="Page @i">@i</a></li>
                     }
                 }
                 @if (currentPage < totalPage)
                 {
-                    <a href="@url?page=@ViewBag.next" title="Next page" class="next">Next</a>
-                    <a href="@url?page=@ViewBag.last" title="Last page" class="last">Last</a>
+                    <li class="page-item"><a class="page-link" href="@url?page=@ViewBag.next" title="Next page" ><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                    <li class="page-item"><a class="page-link" href="@url?page=@ViewBag.last" title="Last page" ><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
                 }
-            </div>
-        } else
+            </ul>
+        }
+        else
         {
             <span>END</span>
         }
