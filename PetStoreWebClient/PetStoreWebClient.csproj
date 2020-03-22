@@ -198,6 +198,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PetFoodController.cs" />
     <Compile Include="EF\Account.cs" />
@@ -220,6 +221,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ModelClass\CartItem.cs" />
+    <Compile Include="ModelClass\CartPetFoodItem.cs" />
     <Compile Include="ModelClass\PetFoodModel.cs" />
     <Compile Include="ModelClass\ProductViewHome.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -269,6 +272,7 @@
     <Content Include="Views\Accounts\Index.cshtml" />
     <Content Include="Views\PetFood\Index.cshtml" />
     <Content Include="Views\PetFood\Detail.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

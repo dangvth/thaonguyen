@@ -20,7 +20,7 @@ namespace PetStoreWebClient.Controllers
             ViewBag.Total = totalRecord;
             ViewBag.Page = page;
 
-            int maxPage = 5;
+            int maxPage = 5;//maximum page link display on website
             int totalPage = 0;
             totalPage = (int)Math.Ceiling((double) totalRecord / pageSize);
 
