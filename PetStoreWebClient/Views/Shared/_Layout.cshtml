@@ -41,18 +41,9 @@
             </div>
             <div class="header_top">
                 <div class="logo">
-                    <a href="#"><img src="/Assets/images/logo.png" alt="" /></a>
+                    <a href="/"><img src="/Assets/images/logo.png" alt="" /></a>
                 </div>
-                <div class="cart">
-                    <p>
-                        Welcome to our Online Store! <span>Cart:</span><div id="dd" class="wrapper-dropdown-2">
-                            0 item(s) - $0.00
-                            <ul class="dropdown">
-                                <li>you have no items in your Shopping cart</li>
-                            </ul>
-                        </div>
-                    </p>
-                </div>
+                @{Html.RenderAction("HeaderCart", "Home");}
                 <script type="text/javascript">
 			function DropDown(el) {
 				this.dd = el;
@@ -166,6 +157,7 @@
 		});
     </script>
     <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+    @RenderSection("jsFooter", required: false)
 </body>
 </html>
 

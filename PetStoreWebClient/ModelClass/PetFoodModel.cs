@@ -25,6 +25,36 @@ namespace PetStoreWebClient.ModelClass
         }
 
         /// <summary>
+        /// get Pet by ID
+        /// </summary>
+        /// <param name="pID"></param>
+        /// <returns></returns>
+        public Pet getPetByID(String pID)
+        {
+            return db.Pet.Find(pID);
+        }
+
+        /// <summary>
+        /// get Pet medicine by ID
+        /// </summary>
+        /// <param name="pmID"></param>
+        /// <returns></returns>
+        public PetMedicine getPetMedicineByID(String pmID)
+        {
+            return db.PetMedicine.Find(pmID);
+        }
+
+        /// <summary>
+        /// get Pet toys by ID
+        /// </summary>
+        /// <param name="ptID"></param>
+        /// <returns></returns>
+        public PetToys getPetToyByID(String ptID)
+        {
+            return db.PetToys.Find(ptID);
+        }
+
+        /// <summary>
         /// get related pet food in sale off
         /// </summary>
         /// <param name="pfID"></param>

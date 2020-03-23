@@ -47,7 +47,7 @@
                                     <div class="features_list">
                                         <h4>@item.p_salePrice.ToString("N0")đ (-@disPrice.ToString("N0")đ)</h4>
                                     </div>
-                                    <a href="@url" class="button">Buy Now</a>
+                                    <a href="/add-to-cart?productID=@item.p_id&Quantity=1" class="btn btn-danger">Buy Now</a>
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -81,7 +81,7 @@
                         <p><span class="rupees">@item.p_salePrice.ToString("N0")đ</span></p>
                     </div>
                     <div class="add-cart">
-                        <h4><a href="#">Add to Cart</a></h4>
+                        <h4><a href="/add-to-cart?productID=@item.p_id&Quantity=1">Add to Cart</a></h4>
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -94,7 +94,7 @@
             <h3>New Pet's Food</h3>
         </div>
         <div class="see">
-            <p><a href="#">See all Products</a></p>
+            <p><a href="/petfood/list">See all Products</a></p>
         </div>
         <div class="clear"></div>
     </div>
@@ -138,7 +138,7 @@
                         <p><span class="rupees">@item.pt_salePrice.Value.ToString("N0")đ</span></p>
                     </div>
                     <div class="add-cart">
-                        <h4><a href="#">Add to Cart</a></h4>
+                        <h4><a href="/add-to-cart?productID=@item.pt_id&Quantity=1">Add to Cart</a></h4>
                     </div>
                     <div class="clear"></div>
                 </div>
