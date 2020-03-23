@@ -24,10 +24,29 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.pm_idTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.petMedicineViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.bbiCustomize = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.pm_nameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.pm_pricesTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.pm_salePriceTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.pm_amountTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.pm_descriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.BillDetailsXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.BillDetailsGridControl = new DevExpress.XtraGrid.GridControl();
+            this.BillDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BillDetailsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colbd_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colb_id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,87 +61,68 @@
             this.colPetMedicine = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPetToy = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPet = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.bbiCustomize = new DevExpress.XtraBars.BarButtonItem();
-            this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
-            this.BillDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.pm_idTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForpm_id = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pm_nameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForpm_name = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pm_imageTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForpm_image = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pm_pricesTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForpm_prices = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pm_salePriceTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForpm_salePrice = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pm_amountTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForpm_amount = new DevExpress.XtraLayout.LayoutControlItem();
-            this.pm_descriptionTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemForpm_description = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForpm_status = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForBillDetails = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.CartsGridControl = new DevExpress.XtraGrid.GridControl();
-            this.ItemForCarts = new DevExpress.XtraLayout.LayoutControlItem();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.BillDetailsBarManager = new DevExpress.XtraBars.BarManager(this.components);
-            this.bbiBillDetailsRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.BillDetailsBar = new DevExpress.XtraBars.Bar();
+            this.bbiBillDetailsRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.BillDetailsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.CartsGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pm_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForpm_id = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForpm_name = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForpm_image = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForpm_prices = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForpm_salePrice = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForpm_amount = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForpm_description = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForpm_status = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForBillDetails = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForCarts = new DevExpress.XtraLayout.LayoutControlItem();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.BillDetailsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.pm_imageTextEdit = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_idTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petMedicineViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_nameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_pricesTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_salePriceTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_amountTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_descriptionTextEdit.Properties)).BeginInit();
             this.BillDetailsXtraUserControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_idTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_nameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_name)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_imageTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_image)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_pricesTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_prices)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_salePriceTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_salePrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_amountTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_amount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_descriptionTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_description)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_status)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBillDetails)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CartsGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsBarManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartsGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pm_statusTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_name)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_prices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_salePrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_amount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_description)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_status)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBillDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_imageTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -130,7 +130,6 @@
             this.dataLayoutControl1.AllowCustomization = false;
             this.dataLayoutControl1.Controls.Add(this.pm_idTextEdit);
             this.dataLayoutControl1.Controls.Add(this.pm_nameTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.pm_imageTextEdit);
             this.dataLayoutControl1.Controls.Add(this.pm_pricesTextEdit);
             this.dataLayoutControl1.Controls.Add(this.pm_salePriceTextEdit);
             this.dataLayoutControl1.Controls.Add(this.pm_amountTextEdit);
@@ -138,6 +137,7 @@
             this.dataLayoutControl1.Controls.Add(this.BillDetailsXtraUserControl);
             this.dataLayoutControl1.Controls.Add(this.CartsGridControl);
             this.dataLayoutControl1.Controls.Add(this.pm_statusTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.pm_imageTextEdit);
             this.dataLayoutControl1.DataSource = this.petMedicineViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
@@ -146,19 +146,211 @@
             this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // pm_idTextEdit
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2});
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
-            this.layoutControlGroup1.TextVisible = false;
+            this.pm_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_idTextEdit.Location = new System.Drawing.Point(68, 12);
+            this.pm_idTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_idTextEdit.Name = "pm_idTextEdit";
+            this.pm_idTextEdit.Properties.ReadOnly = true;
+            this.pm_idTextEdit.Properties.Click += new System.EventHandler(this.pm_idTextEdit_Properties_Click);
+            this.pm_idTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_idTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_idTextEdit.TabIndex = 4;
             // 
             // petMedicineViewBindingSource
             // 
             this.petMedicineViewBindingSource.DataSource = typeof(PetStore.PetMedicine);
+            // 
+            // mainRibbonControl
+            // 
+            this.mainRibbonControl.ExpandCollapseItem.Id = 0;
+            this.mainRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.mainRibbonControl.ExpandCollapseItem,
+            this.mainRibbonControl.SearchEditItem,
+            this.bbiCustomize,
+            this.bbiSave,
+            this.bbiSaveAndClose,
+            this.bbiSaveAndNew,
+            this.bbiReset,
+            this.bbiDelete,
+            this.bbiClose,
+            this.bbiSaveLayout,
+            this.bbiResetLayout});
+            this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
+            this.mainRibbonControl.MaxItemId = 10;
+            this.mainRibbonControl.Name = "mainRibbonControl";
+            this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.mainRibbonPage});
+            this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
+            this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // bbiCustomize
+            // 
+            this.bbiCustomize.Caption = "Customize";
+            this.bbiCustomize.Id = 1;
+            this.bbiCustomize.ImageOptions.ImageUri.Uri = "Customization";
+            this.bbiCustomize.Name = "bbiCustomize";
+            // 
+            // bbiSave
+            // 
+            this.bbiSave.Caption = "Save";
+            this.bbiSave.Id = 2;
+            this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
+            this.bbiSave.Name = "bbiSave";
+            this.bbiSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSave_ItemClick);
+            // 
+            // bbiSaveAndClose
+            // 
+            this.bbiSaveAndClose.Caption = "Save And Close";
+            this.bbiSaveAndClose.Id = 3;
+            this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
+            this.bbiSaveAndClose.Name = "bbiSaveAndClose";
+            this.bbiSaveAndClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSaveAndClose_ItemClick);
+            // 
+            // bbiSaveAndNew
+            // 
+            this.bbiSaveAndNew.Caption = "Save And New";
+            this.bbiSaveAndNew.Id = 4;
+            this.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew";
+            this.bbiSaveAndNew.Name = "bbiSaveAndNew";
+            this.bbiSaveAndNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSaveAndNew_ItemClick);
+            // 
+            // bbiReset
+            // 
+            this.bbiReset.Caption = "Reset Changes";
+            this.bbiReset.Id = 5;
+            this.bbiReset.ImageOptions.ImageUri.Uri = "Reset";
+            this.bbiReset.Name = "bbiReset";
+            // 
+            // bbiDelete
+            // 
+            this.bbiDelete.Caption = "Delete";
+            this.bbiDelete.Id = 6;
+            this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
+            this.bbiDelete.Name = "bbiDelete";
+            // 
+            // bbiClose
+            // 
+            this.bbiClose.Caption = "Close";
+            this.bbiClose.Id = 7;
+            this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
+            this.bbiClose.Name = "bbiClose";
+            // 
+            // bbiSaveLayout
+            // 
+            this.bbiSaveLayout.Caption = "Save Layout";
+            this.bbiSaveLayout.Id = 8;
+            this.bbiSaveLayout.ImageOptions.ImageUri.Uri = "Save";
+            this.bbiSaveLayout.Name = "bbiSaveLayout";
+            // 
+            // bbiResetLayout
+            // 
+            this.bbiResetLayout.Caption = "Reset Layout";
+            this.bbiResetLayout.Id = 9;
+            this.bbiResetLayout.ImageOptions.ImageUri.Uri = "Reset";
+            this.bbiResetLayout.Name = "bbiResetLayout";
+            // 
+            // mainRibbonPage
+            // 
+            this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.mainRibbonPageGroup,
+            this.ribbonPageGroupLayout});
+            this.mainRibbonPage.MergeOrder = 0;
+            this.mainRibbonPage.Name = "mainRibbonPage";
+            this.mainRibbonPage.Text = "Home";
+            // 
+            // mainRibbonPageGroup
+            // 
+            this.mainRibbonPageGroup.AllowTextClipping = false;
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
+            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
+            this.mainRibbonPageGroup.ShowCaptionButton = false;
+            this.mainRibbonPageGroup.Text = "PetMedicine Tasks";
+            // 
+            // ribbonPageGroupLayout
+            // 
+            this.ribbonPageGroupLayout.AllowTextClipping = false;
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiCustomize);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiResetLayout);
+            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
+            this.ribbonPageGroupLayout.Text = "Layout";
+            // 
+            // pm_nameTextEdit
+            // 
+            this.pm_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_nameTextEdit.Location = new System.Drawing.Point(68, 36);
+            this.pm_nameTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_nameTextEdit.Name = "pm_nameTextEdit";
+            this.pm_nameTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_nameTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_nameTextEdit.TabIndex = 5;
+            // 
+            // pm_pricesTextEdit
+            // 
+            this.pm_pricesTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_prices", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_pricesTextEdit.Location = new System.Drawing.Point(68, 84);
+            this.pm_pricesTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_pricesTextEdit.Name = "pm_pricesTextEdit";
+            this.pm_pricesTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.pm_pricesTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.pm_pricesTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.pm_pricesTextEdit.Properties.Mask.EditMask = "N0";
+            this.pm_pricesTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.pm_pricesTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.pm_pricesTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_pricesTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_pricesTextEdit.TabIndex = 7;
+            // 
+            // pm_salePriceTextEdit
+            // 
+            this.pm_salePriceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_salePrice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_salePriceTextEdit.Location = new System.Drawing.Point(68, 108);
+            this.pm_salePriceTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_salePriceTextEdit.Name = "pm_salePriceTextEdit";
+            this.pm_salePriceTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.pm_salePriceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.pm_salePriceTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.pm_salePriceTextEdit.Properties.Mask.EditMask = "N0";
+            this.pm_salePriceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.pm_salePriceTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.pm_salePriceTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_salePriceTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_salePriceTextEdit.TabIndex = 8;
+            // 
+            // pm_amountTextEdit
+            // 
+            this.pm_amountTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_amount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_amountTextEdit.Location = new System.Drawing.Point(68, 132);
+            this.pm_amountTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_amountTextEdit.Name = "pm_amountTextEdit";
+            this.pm_amountTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.pm_amountTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.pm_amountTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.pm_amountTextEdit.Properties.Mask.EditMask = "N0";
+            this.pm_amountTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.pm_amountTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.pm_amountTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_amountTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_amountTextEdit.TabIndex = 9;
+            // 
+            // pm_descriptionTextEdit
+            // 
+            this.pm_descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_descriptionTextEdit.Location = new System.Drawing.Point(68, 156);
+            this.pm_descriptionTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_descriptionTextEdit.Name = "pm_descriptionTextEdit";
+            this.pm_descriptionTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_descriptionTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_descriptionTextEdit.TabIndex = 10;
             // 
             // BillDetailsXtraUserControl
             // 
@@ -185,6 +377,10 @@
             this.BillDetailsGridControl.TabIndex = 0;
             this.BillDetailsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BillDetailsGridView});
+            // 
+            // BillDetailsBindingSource
+            // 
+            this.BillDetailsBindingSource.DataSource = typeof(PetStore.BillDetail);
             // 
             // BillDetailsGridView
             // 
@@ -286,128 +482,115 @@
             this.colPet.FieldName = "Pet";
             this.colPet.Name = "colPet";
             // 
-            // mainRibbonControl
+            // barDockControlLeft
             // 
-            this.mainRibbonControl.ExpandCollapseItem.Id = 0;
-            this.mainRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.mainRibbonControl.ExpandCollapseItem,
-            this.bbiCustomize,
-            this.bbiSave,
-            this.bbiSaveAndClose,
-            this.bbiSaveAndNew,
-            this.bbiReset,
-            this.bbiDelete,
-            this.bbiClose,
-            this.bbiSaveLayout,
-            this.bbiResetLayout,
-            this.mainRibbonControl.SearchEditItem});
-            this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.MaxItemId = 10;
-            this.mainRibbonControl.Name = "mainRibbonControl";
-            this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.mainRibbonPage});
-            this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
-            this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Manager = this.BillDetailsBarManager;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 146);
             // 
-            // bbiCustomize
+            // BillDetailsBarManager
             // 
-            this.bbiCustomize.Caption = "Customize";
-            this.bbiCustomize.Id = 1;
-            this.bbiCustomize.ImageOptions.ImageUri.Uri = "Customization";
-            this.bbiCustomize.Name = "bbiCustomize";
+            this.BillDetailsBarManager.AllowCustomization = false;
+            this.BillDetailsBarManager.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.BillDetailsBar});
+            this.BillDetailsBarManager.DockControls.Add(this.barDockControlTop);
+            this.BillDetailsBarManager.DockControls.Add(this.barDockControlBottom);
+            this.BillDetailsBarManager.DockControls.Add(this.barDockControlLeft);
+            this.BillDetailsBarManager.DockControls.Add(this.barDockControlRight);
+            this.BillDetailsBarManager.Form = this.BillDetailsXtraUserControl;
+            this.BillDetailsBarManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.bbiBillDetailsRefresh});
+            this.BillDetailsBarManager.MainMenu = this.BillDetailsBar;
+            this.BillDetailsBarManager.MaxItemId = 1;
             // 
-            // mainRibbonPage
+            // BillDetailsBar
             // 
-            this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.mainRibbonPageGroup,
-            this.ribbonPageGroupLayout});
-            this.mainRibbonPage.MergeOrder = 0;
-            this.mainRibbonPage.Name = "mainRibbonPage";
-            this.mainRibbonPage.Text = "Home";
+            this.BillDetailsBar.BarName = "BillDetails";
+            this.BillDetailsBar.DockCol = 0;
+            this.BillDetailsBar.DockRow = 0;
+            this.BillDetailsBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.BillDetailsBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiBillDetailsRefresh)});
+            this.BillDetailsBar.OptionsBar.AllowQuickCustomization = false;
+            this.BillDetailsBar.OptionsBar.DrawDragBorder = false;
+            this.BillDetailsBar.Text = "BillDetails";
             // 
-            // mainRibbonPageGroup
+            // bbiBillDetailsRefresh
             // 
-            this.mainRibbonPageGroup.AllowTextClipping = false;
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
-            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
-            this.mainRibbonPageGroup.ShowCaptionButton = false;
-            this.mainRibbonPageGroup.Text = "PetMedicine Tasks";
+            this.bbiBillDetailsRefresh.Caption = "Refresh";
+            this.bbiBillDetailsRefresh.Id = 0;
+            this.bbiBillDetailsRefresh.ImageOptions.ImageUri.Uri = "Refresh";
+            this.bbiBillDetailsRefresh.Name = "bbiBillDetailsRefresh";
+            this.bbiBillDetailsRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // bbiSave
+            // barDockControlTop
             // 
-            this.bbiSave.Caption = "Save";
-            this.bbiSave.Id = 2;
-            this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
-            this.bbiSave.Name = "bbiSave";
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.BillDetailsBarManager;
+            this.barDockControlTop.Size = new System.Drawing.Size(976, 24);
             // 
-            // bbiSaveAndClose
+            // barDockControlBottom
             // 
-            this.bbiSaveAndClose.Caption = "Save And Close";
-            this.bbiSaveAndClose.Id = 3;
-            this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
-            this.bbiSaveAndClose.Name = "bbiSaveAndClose";
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 170);
+            this.barDockControlBottom.Manager = this.BillDetailsBarManager;
+            this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
             // 
-            // bbiSaveAndNew
+            // barDockControlRight
             // 
-            this.bbiSaveAndNew.Caption = "Save And New";
-            this.bbiSaveAndNew.Id = 4;
-            this.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew";
-            this.bbiSaveAndNew.Name = "bbiSaveAndNew";
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
+            this.barDockControlRight.Manager = this.BillDetailsBarManager;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 146);
             // 
-            // bbiReset
+            // CartsGridControl
             // 
-            this.bbiReset.Caption = "Reset Changes";
-            this.bbiReset.Id = 5;
-            this.bbiReset.ImageOptions.ImageUri.Uri = "Reset";
-            this.bbiReset.Name = "bbiReset";
+            this.CartsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.petMedicineViewBindingSource, "Carts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.CartsGridControl.Location = new System.Drawing.Point(12, 424);
+            this.CartsGridControl.MainView = this.gridView1;
+            this.CartsGridControl.MenuManager = this.mainRibbonControl;
+            this.CartsGridControl.Name = "CartsGridControl";
+            this.CartsGridControl.Size = new System.Drawing.Size(1000, 216);
+            this.CartsGridControl.TabIndex = 13;
+            this.CartsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // bbiDelete
+            // gridView1
             // 
-            this.bbiDelete.Caption = "Delete";
-            this.bbiDelete.Id = 6;
-            this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
-            this.bbiDelete.Name = "bbiDelete";
+            this.gridView1.GridControl = this.CartsGridControl;
+            this.gridView1.Name = "gridView1";
             // 
-            // bbiClose
+            // pm_statusTextEdit
             // 
-            this.bbiClose.Caption = "Close";
-            this.bbiClose.Id = 7;
-            this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
-            this.bbiClose.Name = "bbiClose";
+            this.pm_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_statusTextEdit.EditValue = "Active";
+            this.pm_statusTextEdit.Location = new System.Drawing.Point(68, 180);
+            this.pm_statusTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_statusTextEdit.Name = "pm_statusTextEdit";
+            this.pm_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.pm_statusTextEdit.Properties.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.pm_statusTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_statusTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_statusTextEdit.TabIndex = 11;
             // 
-            // ribbonPageGroupLayout
+            // layoutControlGroup1
             // 
-            this.ribbonPageGroupLayout.AllowTextClipping = false;
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiCustomize);
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiResetLayout);
-            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
-            this.ribbonPageGroupLayout.Text = "Layout";
-            // 
-            // bbiSaveLayout
-            // 
-            this.bbiSaveLayout.Caption = "Save Layout";
-            this.bbiSaveLayout.Id = 8;
-            this.bbiSaveLayout.ImageOptions.ImageUri.Uri = "Save";
-            this.bbiSaveLayout.Name = "bbiSaveLayout";
-            // 
-            // bbiResetLayout
-            // 
-            this.bbiResetLayout.Caption = "Reset Layout";
-            this.bbiResetLayout.Id = 9;
-            this.bbiResetLayout.ImageOptions.ImageUri.Uri = "Reset";
-            this.bbiResetLayout.Name = "bbiResetLayout";
-            // 
-            // BillDetailsBindingSource
-            // 
-            this.BillDetailsBindingSource.DataSource = typeof(PetStore.BillDetail);
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
+            this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
             // 
@@ -428,17 +611,6 @@
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(1004, 632);
             // 
-            // pm_idTextEdit
-            // 
-            this.pm_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_idTextEdit.Location = new System.Drawing.Point(68, 12);
-            this.pm_idTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_idTextEdit.Name = "pm_idTextEdit";
-            this.pm_idTextEdit.Properties.ReadOnly = true;
-            this.pm_idTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_idTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_idTextEdit.TabIndex = 4;
-            // 
             // ItemForpm_id
             // 
             this.ItemForpm_id.Control = this.pm_idTextEdit;
@@ -447,16 +619,6 @@
             this.ItemForpm_id.Size = new System.Drawing.Size(1004, 24);
             this.ItemForpm_id.Text = "ID";
             this.ItemForpm_id.TextSize = new System.Drawing.Size(53, 13);
-            // 
-            // pm_nameTextEdit
-            // 
-            this.pm_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_nameTextEdit.Location = new System.Drawing.Point(68, 36);
-            this.pm_nameTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_nameTextEdit.Name = "pm_nameTextEdit";
-            this.pm_nameTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_nameTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_nameTextEdit.TabIndex = 5;
             // 
             // ItemForpm_name
             // 
@@ -467,16 +629,6 @@
             this.ItemForpm_name.Text = "Name";
             this.ItemForpm_name.TextSize = new System.Drawing.Size(53, 13);
             // 
-            // pm_imageTextEdit
-            // 
-            this.pm_imageTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_image", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_imageTextEdit.Location = new System.Drawing.Point(68, 60);
-            this.pm_imageTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_imageTextEdit.Name = "pm_imageTextEdit";
-            this.pm_imageTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_imageTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_imageTextEdit.TabIndex = 6;
-            // 
             // ItemForpm_image
             // 
             this.ItemForpm_image.Control = this.pm_imageTextEdit;
@@ -485,22 +637,6 @@
             this.ItemForpm_image.Size = new System.Drawing.Size(1004, 24);
             this.ItemForpm_image.Text = "Image";
             this.ItemForpm_image.TextSize = new System.Drawing.Size(53, 13);
-            // 
-            // pm_pricesTextEdit
-            // 
-            this.pm_pricesTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_prices", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_pricesTextEdit.Location = new System.Drawing.Point(68, 84);
-            this.pm_pricesTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_pricesTextEdit.Name = "pm_pricesTextEdit";
-            this.pm_pricesTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.pm_pricesTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.pm_pricesTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.pm_pricesTextEdit.Properties.Mask.EditMask = "N0";
-            this.pm_pricesTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.pm_pricesTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.pm_pricesTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_pricesTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_pricesTextEdit.TabIndex = 7;
             // 
             // ItemForpm_prices
             // 
@@ -511,22 +647,6 @@
             this.ItemForpm_prices.Text = "Price";
             this.ItemForpm_prices.TextSize = new System.Drawing.Size(53, 13);
             // 
-            // pm_salePriceTextEdit
-            // 
-            this.pm_salePriceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_salePrice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_salePriceTextEdit.Location = new System.Drawing.Point(68, 108);
-            this.pm_salePriceTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_salePriceTextEdit.Name = "pm_salePriceTextEdit";
-            this.pm_salePriceTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.pm_salePriceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.pm_salePriceTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.pm_salePriceTextEdit.Properties.Mask.EditMask = "N0";
-            this.pm_salePriceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.pm_salePriceTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.pm_salePriceTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_salePriceTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_salePriceTextEdit.TabIndex = 8;
-            // 
             // ItemForpm_salePrice
             // 
             this.ItemForpm_salePrice.Control = this.pm_salePriceTextEdit;
@@ -536,22 +656,6 @@
             this.ItemForpm_salePrice.Text = "Sale Price";
             this.ItemForpm_salePrice.TextSize = new System.Drawing.Size(53, 13);
             // 
-            // pm_amountTextEdit
-            // 
-            this.pm_amountTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_amount", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_amountTextEdit.Location = new System.Drawing.Point(68, 132);
-            this.pm_amountTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_amountTextEdit.Name = "pm_amountTextEdit";
-            this.pm_amountTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.pm_amountTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.pm_amountTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.pm_amountTextEdit.Properties.Mask.EditMask = "N0";
-            this.pm_amountTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.pm_amountTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.pm_amountTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_amountTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_amountTextEdit.TabIndex = 9;
-            // 
             // ItemForpm_amount
             // 
             this.ItemForpm_amount.Control = this.pm_amountTextEdit;
@@ -560,16 +664,6 @@
             this.ItemForpm_amount.Size = new System.Drawing.Size(1004, 24);
             this.ItemForpm_amount.Text = "Amount";
             this.ItemForpm_amount.TextSize = new System.Drawing.Size(53, 13);
-            // 
-            // pm_descriptionTextEdit
-            // 
-            this.pm_descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_descriptionTextEdit.Location = new System.Drawing.Point(68, 156);
-            this.pm_descriptionTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_descriptionTextEdit.Name = "pm_descriptionTextEdit";
-            this.pm_descriptionTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_descriptionTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_descriptionTextEdit.TabIndex = 10;
             // 
             // ItemForpm_description
             // 
@@ -588,17 +682,6 @@
             this.ItemForpm_status.Size = new System.Drawing.Size(1004, 24);
             this.ItemForpm_status.Text = "Status";
             this.ItemForpm_status.TextSize = new System.Drawing.Size(53, 13);
-            // 
-            // ItemForBillDetails
-            // 
-            this.ItemForBillDetails.Control = this.BillDetailsXtraUserControl;
-            this.ItemForBillDetails.Location = new System.Drawing.Point(0, 0);
-            this.ItemForBillDetails.Name = "ItemForBillDetails";
-            this.ItemForBillDetails.Size = new System.Drawing.Size(980, 174);
-            this.ItemForBillDetails.StartNewLine = true;
-            this.ItemForBillDetails.Text = "Bill Details";
-            this.ItemForBillDetails.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForBillDetails.TextVisible = false;
             // 
             // tabbedControlGroup1
             // 
@@ -619,17 +702,16 @@
             this.layoutControlGroup3.Size = new System.Drawing.Size(980, 174);
             this.layoutControlGroup3.Text = "BillDetails";
             // 
-            // CartsGridControl
+            // ItemForBillDetails
             // 
-            this.CartsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.petMedicineViewBindingSource, "Carts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CartsGridControl.Location = new System.Drawing.Point(12, 424);
-            this.CartsGridControl.MainView = this.gridView1;
-            this.CartsGridControl.MenuManager = this.mainRibbonControl;
-            this.CartsGridControl.Name = "CartsGridControl";
-            this.CartsGridControl.Size = new System.Drawing.Size(1000, 216);
-            this.CartsGridControl.TabIndex = 13;
-            this.CartsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.ItemForBillDetails.Control = this.BillDetailsXtraUserControl;
+            this.ItemForBillDetails.Location = new System.Drawing.Point(0, 0);
+            this.ItemForBillDetails.Name = "ItemForBillDetails";
+            this.ItemForBillDetails.Size = new System.Drawing.Size(980, 174);
+            this.ItemForBillDetails.StartNewLine = true;
+            this.ItemForBillDetails.Text = "Bill Details";
+            this.ItemForBillDetails.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForBillDetails.TextVisible = false;
             // 
             // ItemForCarts
             // 
@@ -658,73 +740,6 @@
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
             this.mvvmContext.ViewModelType = typeof(PetStore.ViewModels.PetMedicineViewModel);
             // 
-            // BillDetailsBarManager
-            // 
-            this.BillDetailsBarManager.AllowCustomization = false;
-            this.BillDetailsBarManager.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.BillDetailsBar});
-            this.BillDetailsBarManager.DockControls.Add(this.barDockControlTop);
-            this.BillDetailsBarManager.DockControls.Add(this.barDockControlBottom);
-            this.BillDetailsBarManager.DockControls.Add(this.barDockControlLeft);
-            this.BillDetailsBarManager.DockControls.Add(this.barDockControlRight);
-            this.BillDetailsBarManager.Form = this.BillDetailsXtraUserControl;
-            this.BillDetailsBarManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.bbiBillDetailsRefresh});
-            this.BillDetailsBarManager.MainMenu = this.BillDetailsBar;
-            this.BillDetailsBarManager.MaxItemId = 1;
-            // 
-            // bbiBillDetailsRefresh
-            // 
-            this.bbiBillDetailsRefresh.Caption = "Refresh";
-            this.bbiBillDetailsRefresh.Id = 0;
-            this.bbiBillDetailsRefresh.ImageOptions.ImageUri.Uri = "Refresh";
-            this.bbiBillDetailsRefresh.Name = "bbiBillDetailsRefresh";
-            this.bbiBillDetailsRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // BillDetailsBar
-            // 
-            this.BillDetailsBar.BarName = "BillDetails";
-            this.BillDetailsBar.DockCol = 0;
-            this.BillDetailsBar.DockRow = 0;
-            this.BillDetailsBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.BillDetailsBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiBillDetailsRefresh)});
-            this.BillDetailsBar.OptionsBar.AllowQuickCustomization = false;
-            this.BillDetailsBar.OptionsBar.DrawDragBorder = false;
-            this.BillDetailsBar.Text = "BillDetails";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.BillDetailsBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(976, 24);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 170);
-            this.barDockControlBottom.Manager = this.BillDetailsBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Manager = this.BillDetailsBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 146);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
-            this.barDockControlRight.Manager = this.BillDetailsBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 146);
-            // 
             // BillDetailsPopUpMenu
             // 
             this.BillDetailsPopUpMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -732,26 +747,19 @@
             this.BillDetailsPopUpMenu.Manager = this.BillDetailsBarManager;
             this.BillDetailsPopUpMenu.Name = "BillDetailsPopUpMenu";
             // 
-            // gridView1
+            // pm_imageTextEdit
             // 
-            this.gridView1.GridControl = this.CartsGridControl;
-            this.gridView1.Name = "gridView1";
-            // 
-            // pm_statusTextEdit
-            // 
-            this.pm_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pm_statusTextEdit.EditValue = "Active";
-            this.pm_statusTextEdit.Location = new System.Drawing.Point(68, 180);
-            this.pm_statusTextEdit.MenuManager = this.mainRibbonControl;
-            this.pm_statusTextEdit.Name = "pm_statusTextEdit";
-            this.pm_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.pm_statusTextEdit.Properties.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.pm_statusTextEdit.Size = new System.Drawing.Size(944, 20);
-            this.pm_statusTextEdit.StyleController = this.dataLayoutControl1;
-            this.pm_statusTextEdit.TabIndex = 11;
+            this.pm_imageTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petMedicineViewBindingSource, "pm_image", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pm_imageTextEdit.Location = new System.Drawing.Point(68, 60);
+            this.pm_imageTextEdit.MenuManager = this.mainRibbonControl;
+            this.pm_imageTextEdit.Name = "pm_imageTextEdit";
+            this.pm_imageTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.pm_imageTextEdit.Properties.ReadOnly = true;
+            this.pm_imageTextEdit.Properties.Click += new System.EventHandler(this.pm_imageTextEdit_Properties_Click);
+            this.pm_imageTextEdit.Size = new System.Drawing.Size(944, 20);
+            this.pm_imageTextEdit.StyleController = this.dataLayoutControl1;
+            this.pm_imageTextEdit.TabIndex = 6;
             // 
             // PetMedicineView
             // 
@@ -764,40 +772,40 @@
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_idTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petMedicineViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_nameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_pricesTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_salePriceTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_amountTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_descriptionTextEdit.Properties)).EndInit();
             this.BillDetailsXtraUserControl.ResumeLayout(false);
             this.BillDetailsXtraUserControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_idTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_nameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_name)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_imageTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_image)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_pricesTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_prices)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_salePriceTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_salePrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_amountTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_amount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pm_descriptionTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_description)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_status)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBillDetails)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CartsGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsBarManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartsGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pm_statusTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_prices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_salePrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_amount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_description)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForpm_status)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBillDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pm_imageTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,7 +839,6 @@
         private DevExpress.XtraBars.BarButtonItem bbiSaveLayout;
         private DevExpress.XtraBars.BarButtonItem bbiResetLayout;
         private DevExpress.XtraEditors.TextEdit pm_nameTextEdit;
-        private DevExpress.XtraEditors.TextEdit pm_imageTextEdit;
         private DevExpress.XtraEditors.TextEdit pm_pricesTextEdit;
         private DevExpress.XtraEditors.TextEdit pm_salePriceTextEdit;
         private DevExpress.XtraEditors.TextEdit pm_amountTextEdit;
@@ -870,5 +877,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem ItemForBillDetails;
         private DevExpress.XtraLayout.LayoutControlItem ItemForCarts;
+        private DevExpress.XtraEditors.ButtonEdit pm_imageTextEdit;
     }
 }

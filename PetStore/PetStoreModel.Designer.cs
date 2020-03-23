@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Major\Computer Fundamental Programing\[C# & .NET] (PRN292)\Assignment\Pet Shop\Pet-Store-Management-System\PetStore\PetStoreModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Dell\Source\Repos\thaonmce-130353\thaonguyen\PetStore\PetStoreModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
